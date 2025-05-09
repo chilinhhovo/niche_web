@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche - Saved Articles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>niche<span class="verified-dot"></span></h1>
+                <p>verified indie news</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="saved.html" class="active">Saved</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 style="margin: 30px 0 20px 0; font-size: 1.5rem; color: var(--primary-color);">Saved Articles</h2>
+        <section class="articles">
+            <div class="article-card">
+                <div class="article-image" style="background-color: #333;">
+                    <div class="source-badge" data-source="The Intercept" onclick="openSourceModal('The Intercept')">
+                        <span class="verified-icon"></span>
+                        <span class="source-name">The Intercept</span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3>Investigation reveals corporate influence on climate policy</h3>
+                    <p>New documents show how industry groups have shaped environmental regulations over the past decade.</p>
+                    <div class="article-meta">
+                        <span class="topic-tag">#climate</span>
+                        <span class="date">Mar 2, 2025</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 92%</span>
+                            <span class="verify-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-image" style="background-color: #5a5a5a;">
+                    <div class="source-badge" data-source="ProPublica" onclick="openSourceModal('ProPublica')">
+                        <span class="verified-icon"></span>
+                        <span class="source-name">ProPublica</span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3>The hidden costs of healthcare: An investigation</h3>
+                    <p>Analysis of hospital billing practices reveals systematic overcharging affecting millions.</p>
+                    <div class="article-meta">
+                        <span class="topic-tag">#health</span>
+                        <span class="date">Mar 1, 2025</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 95%</span>
+                            <span class="verify-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    // Reuse the modal JS from index.html if needed
+    </script>
+</body>
+</html> 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>niche<span class="verified-dot"></span></h1>
+                <p>verified indie news</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="saved.html">Saved</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="max-width: 1200px; margin: 0 auto; padding: 30px 20px;">
+        <section style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+            <div style="flex: 2; min-width: 320px; background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px 24px; display: flex; align-items: center; gap: 32px;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--primary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; font-family: 'Montserrat', sans-serif;">JD</div>
+                <div>
+                    <h2 style="margin-bottom: 8px;">Jane Doe</h2>
+                    <div style="color: var(--light-text); font-size: 1rem; margin-bottom: 6px;">Member since January 2025</div>
+                    <div style="color: var(--medium-text); font-size: 1rem;">Interests: Climate, Technology, Investigative Journalism</div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 260px; background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 24px 20px; display: flex; align-items: flex-start;">
+                <div style="background: #f0f6ff; border-radius: 12px; padding: 12px 16px; width: 100%;">
+                    <div style="color: var(--primary-color); font-weight: 700; font-size: 1.1rem; margin-bottom: 6px;">Your Trust Impact</div>
+                    <div style="color: var(--medium-text); font-size: 0.98rem;">You've read 43 verified articles this month<br>That's 15% more than last month!</div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-bottom: 30px;">
+            <div style="display: flex; gap: 0; border-bottom: 2px solid var(--border-color);">
+                <button style="background: var(--primary-color); color: #fff; font-weight: 600; border: none; border-radius: 8px 8px 0 0; padding: 12px 32px; margin-right: 2px;">Reading History</button>
+                <button style="background: none; color: var(--medium-text); font-weight: 500; border: none; border-radius: 8px 8px 0 0; padding: 12px 32px; margin-right: 2px;">Saved Articles</button>
+                <button style="background: none; color: var(--medium-text); font-weight: 500; border: none; border-radius: 8px 8px 0 0; padding: 12px 32px; margin-right: 2px;">Preferences</button>
+                <button style="background: none; color: var(--medium-text); font-weight: 500; border: none; border-radius: 8px 8px 0 0; padding: 12px 32px;">Trusted Sources</button>
+            </div>
+        </section>
+        <section style="display: grid; grid-template-columns: 2fr 2fr 2fr; gap: 24px; margin-bottom: 32px;">
+            <div style="background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 24px;">
+                <div style="font-weight: 600; margin-bottom: 16px;">Reading by Topic</div>
+                <div style="margin-bottom: 10px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 6px;"><div style="width: 60px; height: 10px; background: var(--primary-color); border-radius: 5px; margin-right: 10px;"></div>Environment (40%)</div>
+                    <div style="display: flex; align-items: center; margin-bottom: 6px;"><div style="width: 45px; height: 10px; background: var(--primary-light); border-radius: 5px; margin-right: 10px;"></div>Technology (30%)</div>
+                    <div style="display: flex; align-items: center; margin-bottom: 6px;"><div style="width: 30px; height: 10px; background: #aab6fe; border-radius: 5px; margin-right: 10px;"></div>Politics (20%)</div>
+                    <div style="display: flex; align-items: center;"><div style="width: 15px; height: 10px; background: #d1d8ff; border-radius: 5px; margin-right: 10px;"></div>Health (10%)</div>
+                </div>
+            </div>
+            <div style="background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-weight: 600; margin-bottom: 16px;">Your Trust Score</div>
+                <div style="width: 100px; height: 100px; border-radius: 50%; background: #f7f8fc; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; position: relative;">
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="#e2e8f4" stroke-width="10" fill="none"/>
+                        <circle cx="50" cy="50" r="40" stroke="#00FF85" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="32.656" transform="rotate(-90 50 50)"/>
+                    </svg>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: var(--dark-text);">87%</div>
+                </div>
+                <div style="font-size: 0.95rem; color: var(--medium-text); margin-top: 8px;">
+                    Based on:<br>
+                    • Reading verified sources<br>
+                    • Diverse topic coverage<br>
+                    • Fact-checking engagement
+                </div>
+            </div>
+            <div style="background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 24px;">
+                <div style="font-weight: 600; margin-bottom: 16px;">Recently Read</div>
+                <div style="font-size: 0.98rem; color: var(--dark-text); margin-bottom: 10px;">
+                    <div style="margin-bottom: 8px;"><strong>Investigation reveals corporate influence...</strong><br><span style="color: var(--light-text); font-size: 0.92rem;">The Intercept • Mar 2, 2025</span></div>
+                    <div><strong>The hidden costs of healthcare: An...</strong><br><span style="color: var(--light-text); font-size: 0.92rem;">ProPublica • Mar 1, 2025</span></div>
+                </div>
+            </div>
+        </section>
+        <section style="background: var(--card-bg); border-radius: 16px; box-shadow: var(--card-shadow); padding: 24px; margin-bottom: 40px;">
+            <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 18px;">Your Reading History</div>
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+                    <div>
+                        <div style="font-weight: 700; color: var(--primary-color); margin-bottom: 2px;">Investigation reveals corporate influence on climate policy</div>
+                        <div style="color: var(--light-text); font-size: 0.97rem;">The Intercept • Read on Mar 2, 2025</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="background: var(--trust-badge-bg); color: var(--primary-color); font-weight: 600; padding: 7px 14px; border-radius: 20px; font-size: 0.95rem;">Trust Score: 92%</span>
+                        <span class="verify-check" style="width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; position: relative; display: inline-block;"></span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+                    <div>
+                        <div style="font-weight: 700; color: var(--primary-color); margin-bottom: 2px;">The hidden costs of healthcare: An investigation</div>
+                        <div style="color: var(--light-text); font-size: 0.97rem;">ProPublica • Read on Mar 1, 2025</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="background: var(--trust-badge-bg); color: var(--primary-color); font-weight: 600; padding: 7px 14px; border-radius: 20px; font-size: 0.95rem;">Trust Score: 95%</span>
+                        <span class="verify-check" style="width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; position: relative; display: inline-block;"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

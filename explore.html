@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche - Explore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .explore-container {
+            max-width: 600px;
+            margin: 80px auto 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 48px 32px 40px 32px;
+            text-align: center;
+            position: relative;
+        }
+        .explore-container h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+        .explore-container p {
+            color: var(--medium-text);
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+        .explore-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .explore-pill {
+            background: var(--pill-bg);
+            color: var(--primary-color);
+            border-radius: 25px;
+            padding: 12px 28px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        .explore-pill:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+        .explore-btn {
+            margin-top: 18px;
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .explore-btn:hover {
+            background: var(--primary-light);
+        }
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="confetti"></canvas>
+    <div class="explore-container">
+        <h1>🎉 You're in! 🎉</h1>
+        <p>Welcome to Niche. Start exploring trusted, independent news tailored for you!</p>
+        <div class="explore-suggestions">
+            <div class="explore-pill">Environment</div>
+            <div class="explore-pill">Technology</div>
+            <div class="explore-pill">Politics</div>
+            <div class="explore-pill">Science</div>
+            <div class="explore-pill">Investigations</div>
+            <div class="explore-pill">Health</div>
+        </div>
+        <a href="index.html"><button class="explore-btn">Go to Homepage</button></a>
+    </div>
+    <script>
+    // Simple confetti effect
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth, H = window.innerHeight;
+    canvas.width = W; canvas.height = H;
+    let confetti = [];
+    for(let i=0;i<120;i++){
+        confetti.push({
+            x: Math.random()*W,
+            y: Math.random()*H - H,
+            r: Math.random()*8+4,
+            d: Math.random()*120+40,
+            color: `hsl(${Math.random()*360},90%,60%)`,
+            tilt: Math.random()*10-10
+        });
+    }
+    function drawConfetti(){
+        ctx.clearRect(0,0,W,H);
+        confetti.forEach(c=>{
+            ctx.beginPath();
+            ctx.arc(c.x,c.y,c.r,0,2*Math.PI);
+            ctx.fillStyle = c.color;
+            ctx.fill();
+        });
+        updateConfetti();
+    }
+    function updateConfetti(){
+        confetti.forEach(c=>{
+            c.y += Math.cos(c.d)+2+c.r/2;
+            c.x += Math.sin(c.d);
+            if(c.y>H){
+                c.x = Math.random()*W;
+                c.y = -10;
+            }
+        });
+    }
+    function animate(){
+        drawConfetti();
+        requestAnimationFrame(animate);
+    }
+    animate();
+    window.addEventListener('resize',()=>{
+        W = window.innerWidth; H = window.innerHeight;
+        canvas.width = W; canvas.height = H;
+    });
+    </script>
+</body>
+</html> 

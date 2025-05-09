@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche - Topics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>niche<span class="verified-dot"></span></h1>
+                <p>verified indie news</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html" class="active">Topics</a></li>
+                <li><a href="saved.html">Saved</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="topics">
+            <ul class="topic-pills">
+                <li class="active">All</li>
+                <li>Environment</li>
+                <li>Politics</li>
+                <li>Investigations</li>
+                <li>Technology</li>
+                <li>Science</li>
+            </ul>
+        </section>
+        <section class="articles">
+            <div class="article-card">
+                <div class="article-image" style="background-color: #4caf50;">
+                    <div class="source-badge" data-source="Grist" onclick="openSourceModal('Grist')">
+                        <span class="verified-icon"></span>
+                        <span class="source-name">Grist</span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3>Renewable energy adoption accelerating in rural communities</h3>
+                    <p>Local initiatives are driving a surge in clean energy projects across the country.</p>
+                    <div class="article-meta">
+                        <span class="topic-tag">#environment</span>
+                        <span class="date">Feb 26, 2025</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 91%</span>
+                            <span class="verify-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-image" style="background-color: #1976d2;">
+                    <div class="source-badge" data-source="The Wire" onclick="openSourceModal('The Wire')">
+                        <span class="verified-icon"></span>
+                        <span class="source-name">The Wire</span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3>Tech industry's labor practices under scrutiny</h3>
+                    <p>New reports highlight ongoing challenges for workers in the technology sector.</p>
+                    <div class="article-meta">
+                        <span class="topic-tag">#technology</span>
+                        <span class="date">Feb 27, 2025</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 94%</span>
+                            <span class="verify-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-image" style="background-color: #ff9800;">
+                    <div class="source-badge" data-source="Inside Climate News" onclick="openSourceModal('Inside Climate News')">
+                        <span class="verified-icon"></span>
+                        <span class="source-name">Inside Climate News</span>
+                        <span class="trust-dot"></span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3>New research shows accelerating ice melt in Antarctic region</h3>
+                    <p>Scientists warn of rising sea levels as ice loss continues at record pace.</p>
+                    <div class="article-meta">
+                        <span class="topic-tag">#science</span>
+                        <span class="date">Feb 25, 2025</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 96%</span>
+                            <span class="verify-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    // Reuse the modal JS from index.html if needed
+    </script>
+</body>
+</html> 

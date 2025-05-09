@@ -1,0 +1,180 @@
+niche
+what mainstream media misses
+
+Readers ﬁnd it hard to ….
+
+1
+
+See independent
+news on feeds
+
+2
+
+Find alternative
+news sources
+
+User research (interviews and survey)
+
+3
+
+Verify news
+trustworthiness
+
+Independent media ﬁnd it hard to ….
+
+1
+
+Grow audience
+
+2
+
+Find marketing budget
+
+3
+
+Gain readers’ trust
+
+4
+
+Trust aggregators with
+original content
+
+5
+
+Boost website traffic
+
+User research (survey)
+
+What is independent news?
+
+What does the market look for?
+objectivity and
+trustworthiness in
+news
+
+Intuitive user
+interface design on
+both web and mobile
+
+personalization on
+how and what news
+to read
+
+Scraped more than 2000 similar apps’ user reviews
+from Apple Store in the US** and used Sentiment Classiﬁcation and
+Word Embeddings to analyze the results via tensorﬂow
+
+Solution
+
+A verified alternative news curator personalized to our users
+
+Solution
+
+For readers
+Discover new content
+from smaller
+non-traditional media
+outlets & startups
+
+Veriﬁed news
+through a trust rubric
+in partnership with
+(logo trust project)
+
+AI personalization
+using AI recommendation
+model and semantic
+analysis
+
+Solution
+
+For independent
+media
+Grow your audiences
+through direct clicks to
+newsrooms’ websites
+
+Build skills
+through exclusive training
+on audience engagement
+and digital journalism tools
+
+Collaborate
+opportunities with
+niche’s media partners
+
+Gain revenue
+ads sharing and
+collaborative grants
+opportunities
+
+Revenue streams
+Year 1
+
+Targeted ads
+
+Training & workshops
+
+Connect free readers with free sources
+Using grant’s funding to ﬁnd product market ﬁt by building
+a minimum viable product
+Build website with targeted ads
+
+Year 2
+Offering workshops and trainings to network’s newsrooms
+
+Year 3
+
+Users Subscriptions
+
+Partner with newsrooms that have paywalls
+Roll out a monthly subscription model
+Build mobile app
+
+Founding Team
+Newsroom + Community
+Partnerships
+
+Communications
+Strategy
+
+Designer +
+Product Strategy
+
+Audience + User
+Engagement
+
+Back-end +
+AI Model Developer
+
+Annika McGinnis
+
+Arindam Sengupta
+
+Chi Vo
+
+Rashi Mishra
+
+Tianrui Bayles-Rae
+
+Co-founder of
+
+Founder of
+
+PhD in Mathematics
+
+Rabbithole India
+Past
+
+Past
+
+Past
+
+Past
+
+Past
+
+niche
+what mainstream media misses
+
+
