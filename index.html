@@ -3,294 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niche - Trusted Independent News</title>
+    <title>Niche - Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            background: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: var(--card-shadow);
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-container h1 {
+            color: var(--primary-color);
+            margin-bottom: 18px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1.5px solid var(--border-color);
+            font-size: 1rem;
+        }
+        .login-container button {
+            width: 100%;
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .login-container button:hover {
+            background: var(--primary-light);
+        }
+        .login-animation {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .checkmark {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            animation: popIn 0.5s cubic-bezier(.4,0,.2,1);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .checkmark svg {
+            stroke: #fff;
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            width: 38px;
+            height: 38px;
+            animation: drawCheck 0.7s 0.2s cubic-bezier(.4,0,.2,1) forwards;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+        }
+        @keyframes drawCheck {
+            to { stroke-dashoffset: 0; }
+        }
+        .login-success-msg {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>niche<span class="verified-dot"></span></h1>
-                <p>verified indie news</p>
+    <div class="login-container">
+        <h1>niche<span class="verified-dot"></span></h1>
+        <p style="margin-bottom: 24px; color: var(--medium-text);">Sign in to continue</p>
+        <form id="loginForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Continue</button>
+        </form>
+        <div class="login-animation" id="loginAnim">
+            <div class="checkmark">
+                <svg viewBox="0 0 38 38">
+                    <polyline points="10,20 17,28 28,12" />
+                </svg>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="topics.html">Topics</a></li>
-                <li><a href="saved.html">Saved</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>News you can actually trust</h2>
-                <p>Curated content from verified independent newsrooms — because your attention deserves better</p>
-                <button class="cta-button" onclick="window.location.href='explore.html'">Start Exploring</button>
-            </div>
-        </section>
-
-        <section class="search-container">
-            <input type="text" placeholder="Search independent news" class="search-input">
-            <button class="search-button">
-                <span class="search-icon">⌕</span>
-            </button>
-        </section>
-
-        <section class="topics">
-            <ul class="topic-pills">
-                <li class="active">All</li>
-                <li>Environment</li>
-                <li>Politics</li>
-                <li>Investigations</li>
-                <li>Technology</li>
-                <li>Science</li>
-            </ul>
-        </section>
-
-        <section class="articles">
-            <div class="article-card">
-                <div class="article-image" style="background-color: #333;">
-                    <div class="source-badge" data-source="The Intercept" onclick="openSourceModal('The Intercept')">
-                        <span class="verified-icon"></span>
-                        <span class="source-name">The Intercept</span>
-                        <span class="trust-dot"></span>
-                    </div>
-                </div>
-                <div class="article-content">
-                    <h3>Investigation reveals corporate influence on climate policy</h3>
-                    <p>New documents show how industry groups have shaped environmental regulations over the past decade.</p>
-                    <div class="article-meta">
-                        <span class="topic-tag">#climate</span>
-                        <span class="date">Mar 2, 2025</span>
-                        <div class="trust-score">
-                            <span>Trust Score: 92%</span>
-                            <span class="verify-check"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <div class="article-image" style="background-color: #5a5a5a;">
-                    <div class="source-badge" data-source="ProPublica" onclick="openSourceModal('ProPublica')">
-                        <span class="verified-icon"></span>
-                        <span class="source-name">ProPublica</span>
-                        <span class="trust-dot"></span>
-                    </div>
-                </div>
-                <div class="article-content">
-                    <h3>The hidden costs of healthcare: An investigation</h3>
-                    <p>Analysis of hospital billing practices reveals systematic overcharging affecting millions.</p>
-                    <div class="article-meta">
-                        <span class="topic-tag">#health</span>
-                        <span class="date">Mar 1, 2025</span>
-                        <div class="trust-score">
-                            <span>Trust Score: 95%</span>
-                            <span class="verify-check"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <div class="article-image" style="background-color: #2c3e50;">
-                    <div class="source-badge" data-source="Bellingcat" onclick="openSourceModal('Bellingcat')">
-                        <span class="verified-icon"></span>
-                        <span class="source-name">Bellingcat</span>
-                        <span class="trust-dot"></span>
-                    </div>
-                </div>
-                <div class="article-content">
-                    <h3>Digital investigation exposes disinformation networks</h3>
-                    <p>Open-source intelligence reveals coordinated efforts to spread false narratives.</p>
-                    <div class="article-meta">
-                        <span class="topic-tag">#disinfo</span>
-                        <span class="date">Feb 28, 2025</span>
-                        <div class="trust-score">
-                            <span>Trust Score: 89%</span>
-                            <span class="verify-check"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="trending">
-            <h2>Trending Stories</h2>
-            <div class="trending-grid">
-                <div class="trending-card">
-                    <div class="trend-label">1</div>
-                    <div class="trend-content">
-                        <h4>Tech industry's labor practices under scrutiny</h4>
-                        <p>The Wire • Feb 27, 2025</p>
-                    </div>
-                    <div class="mini-trust">94%</div>
-                </div>
-                
-                <div class="trending-card">
-                    <div class="trend-label">2</div>
-                    <div class="trend-content">
-                        <h4>Renewable energy adoption accelerating in rural communities</h4>
-                        <p>Grist • Feb 26, 2025</p>
-                    </div>
-                    <div class="mini-trust">91%</div>
-                </div>
-                
-                <div class="trending-card">
-                    <div class="trend-label">3</div>
-                    <div class="trend-content">
-                        <h4>New research shows accelerating ice melt in Antarctic region</h4>
-                        <p>Inside Climate News • Feb 25, 2025</p>
-                    </div>
-                    <div class="mini-trust">96%</div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>niche<span class="verified-dot"></span></h2>
-                <p>© 2025 Niche Media</p>
-            </div>
-            <div class="footer-links">
-                <div class="link-group">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Trust Indicators</a></li>
-                        <li><a href="#">For Publishers</a></li>
-                    </ul>
-                </div>
-                <div class="link-group">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="link-group">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="text-align:center; color:var(--light-text); font-size:0.95rem; margin-top:24px;">
-            Niche does not use cookies to exploit your data. If you think our recommendations are no longer matching the news you want to read, please re-do the quiz.
-        </div>
-    </footer>
-
-    <!-- Source Profile Modal -->
-    <div id="sourceProfileModal" class="modal-overlay" style="display:none;">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeSourceModal()">&times;</button>
-            <div id="modalProfileContent">
-                <!-- Populated by JS -->
-            </div>
+            <div class="login-success-msg">Login successful!</div>
         </div>
     </div>
-
     <script>
-    // Example trust data for each source
-    const sourceTrustData = {
-        'The Intercept': {
-            trustScore: 92,
-            indicators: [
-                { label: 'Transparent Attribution', value: 95, desc: 'Clear bylines, dates, and source attributions' },
-                { label: 'Sourcing Practices', value: 90, desc: 'References multiple credible sources with direct links' },
-                { label: 'Ethics Policy', value: 100, desc: 'Publicly accessible ethics statement and correction policy' },
-                { label: 'Diverse Voices', value: 85, desc: 'Presents multiple perspectives on the issue' },
-                { label: 'Actionable Feedback', value: null, desc: '' }
-            ]
-        },
-        'ProPublica': {
-            trustScore: 95,
-            indicators: [
-                { label: 'Transparent Attribution', value: 98, desc: 'Clear bylines, dates, and source attributions' },
-                { label: 'Sourcing Practices', value: 93, desc: 'References multiple credible sources with direct links' },
-                { label: 'Ethics Policy', value: 100, desc: 'Publicly accessible ethics statement and correction policy' },
-                { label: 'Diverse Voices', value: 90, desc: 'Presents multiple perspectives on the issue' },
-                { label: 'Actionable Feedback', value: null, desc: '' }
-            ]
-        },
-        'Bellingcat': {
-            trustScore: 89,
-            indicators: [
-                { label: 'Transparent Attribution', value: 90, desc: 'Clear bylines, dates, and source attributions' },
-                { label: 'Sourcing Practices', value: 85, desc: 'References multiple credible sources with direct links' },
-                { label: 'Ethics Policy', value: 95, desc: 'Publicly accessible ethics statement and correction policy' },
-                { label: 'Diverse Voices', value: 80, desc: 'Presents multiple perspectives on the issue' },
-                { label: 'Actionable Feedback', value: null, desc: '' }
-            ]
-        }
+    document.getElementById('loginForm').onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('loginAnim').style.display = 'flex';
+        setTimeout(function(){
+            window.location.href = 'quiz.html';
+        }, 1500);
     };
-
-    function openSourceModal(source) {
-        const modal = document.getElementById('sourceProfileModal');
-        const content = document.getElementById('modalProfileContent');
-        const data = sourceTrustData[source];
-        if (!data) return;
-        // Build modal HTML
-        let indicatorsHTML = '';
-        data.indicators.forEach(ind => {
-            if (ind.value !== null) {
-                indicatorsHTML += `
-                <div style="margin-bottom: 12px;">
-                    <div style="display: flex; justify-content: space-between; font-weight: 600;">
-                        <span>${ind.label}</span>
-                        <span>${ind.value}%</span>
-                    </div>
-                    <div style="background: #f0f6ff; border-radius: 8px; height: 8px; margin: 6px 0 2px 0; width: 100%;">
-                        <div style="background: #00FF85; height: 8px; border-radius: 8px; width: ${ind.value}%;"></div>
-                    </div>
-                    <div style="font-size: 0.93rem; color: var(--medium-text);">${ind.desc}</div>
-                </div>`;
-            } else {
-                indicatorsHTML += `<div style='margin-bottom: 12px; font-weight: 600; color: var(--light-text);'>${ind.label}</div>`;
-            }
-        });
-        content.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 18px;">
-                <span class="verified-icon" style="width: 28px; height: 28px;"></span>
-                <span style="font-size: 1.15rem; font-weight: 700; color: var(--primary-color);">${source}</span>
-            </div>
-            <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; color: var(--dark-text);">Trust Verification</div>
-            <div style="color: var(--medium-text); margin-bottom: 18px;">This source has been evaluated based on The Trust Project indicators</div>
-            <div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
-                <div style="flex: 0 0 120px; display: flex; flex-direction: column; align-items: center;">
-                    <svg width="100" height="100">
-                        <circle cx="50" cy="50" r="40" stroke="#e2e8f4" stroke-width="10" fill="none"/>
-                        <circle cx="50" cy="50" r="40" stroke="#00FF85" stroke-width="10" fill="none" stroke-dasharray="251.2" stroke-dashoffset="${251.2 - (251.2 * data.trustScore / 100)}" transform="rotate(-90 50 50)"/>
-                    </svg>
-                    <div style="width: 100px; text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--dark-text); margin-top: 8px;">${data.trustScore}%<div style='font-size: 1rem; font-weight: 500; color: var(--medium-text);'>Trust Score</div></div>
-                </div>
-                <div style="flex: 1; min-width: 220px;">${indicatorsHTML}</div>
-            </div>
-        `;
-        modal.style.display = 'flex';
-    }
-    function closeSourceModal() {
-        document.getElementById('sourceProfileModal').style.display = 'none';
-    }
-    // Optional: Close modal on overlay click
-    document.addEventListener('click', function(e) {
-        const modal = document.getElementById('sourceProfileModal');
-        if (modal.style.display === 'flex' && e.target === modal) {
-            closeSourceModal();
-        }
-    });
     </script>
 </body>
-</html>
+</html> 
